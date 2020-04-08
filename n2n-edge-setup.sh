@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# For n2n v2.6.0
+
 set -e
 set -o pipefail
 
@@ -28,7 +30,7 @@ Wants=network-online.target
 
 [Service]
 EnvironmentFile=/etc/n2n/edge/%i
-ExecStart=$(which edge) -f -a \$N2N_IP_ADDRESS -c \$N2N_COMMUNITY -k \$N2N_KEY -l \$N2N_SUPERNODE -u $(id -u nobody) -g $(id -g nobody) -r
+ExecStart=$(which edge) -f -a \$N2N_IP_ADDRESS -c \$N2N_COMMUNITY -k \$N2N_KEY -l \$N2N_SUPERNODE -u $(id -u nobody) -g $(id -g nobody) -E
 
 [Install]
 WantedBy=multi-user.target
