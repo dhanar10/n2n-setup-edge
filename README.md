@@ -1,4 +1,4 @@
-# n2n-setup
+# n2n-edge-setup
 
 Setup an n2n edge service that runs on boot
 
